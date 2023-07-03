@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <script src="assests/JavaScript/Scripts.js" defer></script>
+    <script src="assests/JavaScript/obterDados.js" defer></script>
+    <script src="assests/JavaScript/cep.js" defer></script>
+    <title>Cadastro do Usuario</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-image">
+        <img src="./assests/img/undraw_on_the_way_re_swjt (1).svg" alt="" />
+      </div>
+      <div class="form">
+        <form id="frmCliente">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastro do Usuario</h1>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="username">Nome Completo</label>
+              <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="number">Telefone para Contato</label>
+              <input
+                id="number"
+                type="tel"
+                name="number"
+                placeholder="(xx) xxxx-xxxx"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="cpfCnpj">CPF/CNPJ:</label>
+              <input
+                id="cpfCnpj"
+                type="text"
+                name="cpfCnpj"
+                placeholder="Digite seu CPF ou CNPJ"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="enderecoCep">Digite seu CEP</label>
+              <input
+                id="enderecoCep"
+                type="text"
+                name="enderecoCep"
+                placeholder="Digite seu CEP"
+                maxlength="8"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="endereco">Digite seu Endereço</label>
+              <input
+                id="endereco"
+                type="text"
+                name="endereco"
+                placeholder="Digite seu Endereço"
+                required
+              />
+              <label for="endereco">Número e complemento</label>
+              <input
+                type="text"
+                name="complemento"
+                id="complemento"
+                placeholder="Digite seu Nº e complemento"
+              />
+            </div>
+          </div>
+
+          <div class="gender-inputs">
+            <div class="gender-title">
+              <h6>Qual sua opção de cadastro?</h6>
+            </div>
+
+            <div class="gender-group">
+              <div class="gender-input">
+                <input
+                  type="radio"
+                  name="opcaoCadastro"
+                  id="entregador"
+                  value="Entregador"
+                />
+                <label for="entregador">Entregador</label>
+              </div>
+
+              <div class="gender-input">
+                <input
+                  type="radio"
+                  name="opcaoCadastro"
+                  id="recebedor"
+                  value="Recebedor"
+                />
+                <label for="recebedor">Recebedor</label>
+              </div>
+
+              <div class="gender-input">
+                <input
+                  type="radio"
+                  name="opcaoCadastro"
+                  id="entregadorRecebedor"
+                  value="Entregador/Recebedor"
+                />
+                <label for="entregadorRecebedor">Entregador/Recebedor</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <button id="btnSalvar">
+              <a href="assests/inform.html">Continuar</a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

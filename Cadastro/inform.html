@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assests/css/style-pag-2.css" />
+    <title>Informações do Usuário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-image">
+        <img src="./assests/img/certify.svg" alt="" />
+      </div>
+      <div class="form">
+        <form id="frmCliente">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastro do Usuario</h1>
+            </div>
+          </div>
+
+          <h1>Informações do Usuário:</h1>
+
+          <div class="p-group">
+            <div class="p-box">
+              <p>
+                <strong>Nome de usuário: </strong><span id="username"></span>
+              </p>
+              <p><strong>Email: </strong> <span id="email"></span></p>
+              <p><strong>Número: </strong> <span id="number"></span></p>
+              <p><strong>CPF ou CNPJ: </strong> <span id="cpfCnpj"></span></p>
+              <p><strong>CEP:</strong> <span id="enderecoCep"></span></p>
+              <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+              <p>
+                <strong>Opção de cadastro selecionada: </strong>
+                <span id="opcaoCadastro"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <button id="btnContinuar">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        var formData = JSON.parse(localStorage.getItem("formData"));
+
+        document.getElementById("username").textContent = formData.username;
+        document.getElementById("email").textContent = formData.email;
+        document.getElementById("number").textContent = formData.number;
+        document.getElementById("cpfCnpj").textContent = formData.cpfCnpj;
+        document.getElementById("enderecoCep").textContent =
+          formData.enderecoCep;
+        document.getElementById("endereco").textContent = formData.endereco;
+        document.getElementById("opcaoCadastro").textContent =
+          formData.opcaoCadastro;
+
+        var btnContinuar = document.getElementById("btnContinuar");
+        btnContinuar.addEventListener("click", function () {
+          window.open("assests/pagina3/encomenda.html", "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>
